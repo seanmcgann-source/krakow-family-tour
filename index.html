@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>As Old As It Looks — Kraków</title>
+<title>A Weekend in Krakow - As Old As It Looks</title>
 <style>
 :root{
   /* Polish flag: white above, crimson below. Kraków's arms: blue wall, gold-crowned white eagle. */
@@ -288,7 +288,7 @@ footer{margin:36px 0 10px;font-size:calc(13px*var(--fs));color:var(--ink-soft);t
 <div class="bar">
   <div class="bar-in">
     <button id="back" class="hide">&larr; Back</button>
-    <div class="bar-title" id="barTitle">As Old As It Looks</div>
+    <div class="bar-title" id="barTitle">A Weekend in Krakow - As Old As It Looks</div>
     <button id="fs">A<sup>+</sup></button>
   </div>
   <div class="board" id="board"></div>
@@ -790,12 +790,12 @@ const STOPS=[
  guesses:[
  {q:"How far has the ground level of this square risen in a thousand years?", a:"Two to two and a half metres, which is why the church looks sunk.", src:"here"},
  {q:"How many steps lead down to the original medieval doorway?", a:"Count them as you go down. The old floor sits almost two metres below the paving you are standing on.", src:"away"}],
- act:{type:"label", kind:"Diagram labelling", prompt:"Tap each number on the drawing, then choose what it is.",
+ act:{type:"label", kind:"Diagram labelling", prompt:"None of these labels name their own position, so you will have to work each one out.",
   svg:"adalbert",
-  pins:[{x:200,y:60,a:"17th-century dome, added when the church was raised"},
-        {x:176,y:104,a:"Round window, cut in the 1600s"},
-        {x:200,y:128,a:"Today's paving level"},
-        {x:200,y:186,a:"Ground level around the year 1000"}],
+  pins:[{x:200,y:60,a:"Baroque, and the newest thing on the whole building"},
+        {x:176,y:104,a:"Cut through Romanesque stone six centuries after it was laid"},
+        {x:200,y:128,a:"Where you are standing"},
+        {x:200,y:186,a:"Where the first worshippers stood"}],
   note:"The whole building is a Romanesque church wearing a Baroque hat, hoisted bodily out of a rising square."},
  verdict:{answer:"Older than it looks", note:"Older, and physically higher, than it was ever meant to be."},
  links:[["VisitMałopolska: St Adalbert's","https://visitmalopolska.pl/en_GB/obiekt/-/poi/kosciol-pw-sw-wojciecha-w-krakowie"]],
@@ -896,12 +896,12 @@ const STOPS=[
  guesses:[
  {q:"How many years did the carving take?", a:"Twelve, from 1477 to 1489.", src:"here"},
  {q:"Each of the largest figures was carved from a single tree. Roughly how many trees?", a:"Dozens. The biggest figures alone stand 2.7 metres, and every one needed a trunk that size.", src:"away"}],
- act:{type:"label", kind:"Diagram labelling", prompt:"Tap each number on the drawing, then choose what it is.",
+ act:{type:"label", kind:"Diagram labelling", prompt:"None of these labels name their own position, so you will have to work each one out.",
   svg:"altar",
-  pins:[{x:200,y:120,a:"Central panel, figures up to 2.7m, each from one tree"},
-        {x:98,y:134,a:"Outer wing, folds shut over the middle"},
-        {x:200,y:26,a:"Eleven metres wide"},
-        {x:356,y:140,a:"Thirteen metres high"}],
+  pins:[{x:200,y:120,a:"Every large figure here was cut from a single tree"},
+        {x:98,y:134,a:"Hinged, so the whole thing can be shut on a quiet day"},
+        {x:200,y:26,a:"About the length of a double-decker bus"},
+        {x:356,y:140,a:"About as tall as a four-storey house"}],
   note:"A pentaptych: five panels, hinged so the wings close. The opening of the wings is a daily ceremony worth timing your visit around."},
  verdict:{answer:"As old as it looks", note:"Genuinely finished in 1489, and one of the few things on this trip that is exactly what it claims. The wrinkle is that it spent 1941 to 1957 somewhere else entirely."},
  practical:"The wings are opened ceremonially once a day and that is the thing to catch. Check the current time at the door, since it shifts. Visitors enter through a separate side entrance from worshippers and pay a small fee.",
@@ -1065,7 +1065,7 @@ const STOPS=[
  kids:{who:"all", do:"Find the plaque on the wall. That is the whole task, and it takes thirty seconds.", find:"The name Conrad, hiding in the Polish text.", how:"A small plaque on the wall of the city offices on Poselska, a narrow quiet street. Thirty seconds. The task is simply to spot it, then find the name Conrad in the Polish text. Good one to give a child who wants a job while the adults read."},
  sources:[["Conrad Festival","https://en.conradfestival.pl/p/81,in-the-footsteps-of-conrad-conrad-year"],["Duke University: Conrad exhibition","https://exhibits.library.duke.edu/exhibits/show/josephconrad/borderlands"]]},
 /* ================= DAY TWO ================= */
-{id:"zielonyjar", addr:"Zielony Jar, 31-752 Kraków, Poland", day:"d2", seg:0, ord:0, tag:"all", svg:null,
+{id:"zielonyjar", addr:"Zielony Jar, 31-752 Kraków, Poland", day:null, seg:0, ord:0, tag:"all", svg:null,
  title:"Zielony Jar parkrun", sub:"The last letter", era:"Saturday, 9am",
  intro:"25 letters conquered, Z nearly in the bag, and only J left standing! We're delighted to run Zielony Jar with you today (or watch you). Here's to the final chapter of your alphabet adventure.",
  story:[],
@@ -1221,12 +1221,12 @@ const STOPS=[
  guesses:[
  {q:"In what year did the royal court leave Kraków for Warsaw?", a:"1596. Kraków has now spent over four centuries as a former capital.", src:"here"},
  {q:"Count the columns on the top storey of one side of the courtyard. Guess first.", a:"Count them and settle it. The top storey uses columns of double height, which is the trick that makes the whole yard feel light.", src:"away"}],
- act:{type:"label", kind:"Diagram labelling", prompt:"Tap each number on the drawing, then choose what it is.",
+ act:{type:"label", kind:"Diagram labelling", prompt:"None of these labels name their own position, so you will have to work each one out.",
   svg:"wawel",
-  pins:[{x:76,y:64,a:"Top storey: columns of double height, which stretches the whole facade"},
-        {x:76,y:110,a:"Middle gallery, regular arcades"},
-        {x:76,y:160,a:"Ground arcade, where the court moved between rooms"},
-        {x:200,y:32,a:"Steep roof, a northern habit on an Italian design"}],
+  pins:[{x:76,y:64,a:"Stretched to double height, the trick that makes a heavy building look light"},
+        {x:76,y:110,a:"The plain tier, the only one that behaves itself"},
+        {x:76,y:160,a:"How the court crossed from room to room without stepping outside"},
+        {x:200,y:32,a:"A northern necessity bolted onto an Italian design"}],
   note:"The doubled top columns are the trick. They make a heavy building look light, and Polish builders copied it for generations."},
  verdict:{answer:"As old as it looks", note:"Genuinely 1517 to 1536, apart from one wing rebuilt under German occupation."},
  links:[["Wawel Royal Castle","https://wawel.krakow.pl/en/information-about-museum"]],
@@ -1311,9 +1311,9 @@ const STOPS=[
  guesses:[],
  act:null,
  verdict:null,
- practical:"Wed to Sun, 9:00 to 17:00, closed Monday and Tuesday, free on Wednesday. Last entry 30 minutes before closing, so be inside by 16:00. 22 PLN normal, 16 reduced, 44 family. Allow 45 minutes to an hour and a quarter. Not a stop for the youngest children.",
+ practical:"Wed to Sun, 9:00 to 17:00, closed Monday and Tuesday, free on Wednesday. Last entry 30 minutes before closing, so be inside by 16:00. 22 PLN normal, 16 reduced, 44 family. Allow 45 minutes to an hour and a quarter.",
  links:[["Polscy Sprawiedliwi: Pankiewicz's story","https://sprawiedliwi.org.pl/en/stories-of-rescue/story-tadeusz-pankiewicz"]],
- kids:{who:"skip", do:"Not a stop for them, and not one to bring them to. Take the children to the playground on Rynek Podgórski and swap over.", find:"Nothing here.", how:"Not a stop for them, and not one to bring them to. Take them to the playground on Rynek Podgórski, a few minutes away, and swap adults over so everyone who wants to see the pharmacy can."},
+ kids:null,
  sources:[["Polscy Sprawiedliwi","https://sprawiedliwi.org.pl/en/stories-of-rescue/story-tadeusz-pankiewicz"],["Silent Heroes Memorial Centre","https://www.gedenkstaette-stille-helden.de/en/silent-heroes/biographies/biographie/detail-281"]]},
 
 {id:"krakus", addr:"Kopiec Krakusa, ul. Maryewskiego, 30-543 Kraków", day:"d3", seg:1, tag:"all", svg:"mound",
@@ -1330,7 +1330,7 @@ const STOPS=[
  {q:"How high is it, and where does it rank in the city?", a:"Sixteen metres, and the summit is the highest point anywhere in Kraków.", src:"away"}],
  act:{type:"reflect", kind:"Last word",
   prompt:"Three days, twenty-eight stops. Go round the group: what has stuck with you, and why that one?",
-  note:"No right answer and no scoring against each other. Award the points to whoever gives the answer the group likes best, or split them. If it helps, prompts: which story would you repeat to someone at home, which thing looked oldest and was not, and which one you would come back for."},
+  note:"No right answer and no scoring against each other. Award the points to whoever gives the answer the group likes best, or split them."},
  verdict:{answer:"Older than it looks", note:"The honest answer is that nobody knows, which makes it the right last card in the game."},
  links:[["Hidden Europe: Kraków's mounds","https://www.hiddeneurope.eu/the-magazine/issues/hidden-europe-59/mystery-and-memory-exploring-krakows-suburban-mounds/"]],
  kids:{who:"all", do:"At the top, point to four places they have already been. Then roll down the side.", find:"The whole city. This is the last scale, so it gets the big sticker.", how:"A grass hill across the river in Podgórze, steeper than the first one, with a path to the top. From the summit you can see the whole city. Point out the castle, the two church towers on the Main Square, the river, and the chimneys of Nowa Huta on the far horizon. Then let them point at things they recognise. Rolling down is expected. This is the last scale, so bring the big sticker."},
@@ -1546,7 +1546,7 @@ function activity(a,host,key,meta){
   }
 
   else if(a.type==="reflect"){
-    html+=`<button class="ghost rev">Show the prompt notes</button><div class="ansbox"></div>`+winBox();
+    html+=`<button class="ghost rev">Ready to score</button><div class="ansbox"></div>`+winBox();
     el.innerHTML=html;
     el.querySelector(".rev").onclick=()=>{
       el.querySelector(".rev").disabled=true;
@@ -1603,13 +1603,12 @@ function activity(a,host,key,meta){
 function renderStop(s){
   barTitle.textContent=s.title;
   const d=day(s.day);
-  const tagHtml=s.tag==="split"?'<span class="tag split">Group may split here</span>'
-    :s.tag==="food"?'<span class="tag food">Food stop</span>':'<span class="tag all">Everyone</span>';
+  const tagHtml=s.tag==="food"?'<span class="tag food">Food stop</span>':'';
   app.innerHTML=`
-    <p class="eyebrow" style="margin-top:22px">${esc(d.title)} &middot; ${esc(s.era)}</p>
+    <p class="eyebrow" style="margin-top:22px">${d?esc(d.title)+" &middot; ":""}${esc(s.era)}</p>
     <h2>${esc(s.title)}</h2>
     <p class="lede">${esc(s.sub)}</p>
-    <div>${tagHtml}</div>
+    ${tagHtml?`<div>${tagHtml}</div>`:""}
     ${s.solemn?"":""}
     <div class="addr" id="addr"><span class="a">${esc(s.addr)}</span><button id="cp">Copy</button></div>
     ${s.svg&&S[s.svg]?`<figure class="illus">${S[s.svg]}</figure>`:""}
@@ -1663,7 +1662,7 @@ function renderStop(s){
         cp.textContent="Select it";}
       ta.remove();}
   };
-  const meta={day:d.title,stopId:s.id,stop:s.title};
+  const meta={day:d?d.title:"Anytime",stopId:s.id,stop:s.title};
   if(s.guesses&&s.guesses.length){
     const g=app.querySelector("#guesses");
     s.guesses.forEach((q,i)=>{
@@ -1888,9 +1887,9 @@ function exportMail(){
 
 /* ===================== lists ===================== */
 function renderHome(){
-  barTitle.textContent="As Old As It Looks";
-  app.innerHTML=`<h1>As Old As It Looks</h1>
-    <p class="lede">The tour of Krakow as it is described on this web page shows a genuinely fascinating city, though one that sometimes pretends to be younger than it is and others it pretends to be older. More often that, there are parts that are just simply exaggerated or made up for the sake of a good story. With all that in mind, I can't think of a better place to mark a milestone in Paul's life and a family holiday.</p>
+  barTitle.textContent="A Weekend in Krakow - As Old As It Looks";
+  app.innerHTML=`<h1>A Weekend in Krakow - As Old As It Looks</h1>
+    <p class="lede">The tour of Krakow as it is described on this web page shows a genuinely fascinating city, though one that sometimes pretends to be younger than it is and other times it pretends to be older. It also exaggerates itself or makes things up for the sake of a good story. With all that in mind, I can't think of a better place to mark a milestone in Paul's life and a family holiday.</p>
     <div class="feature" data-s="zielonyjar" role="button" tabindex="0">
       <p class="eyebrow">Saturday, 9am &middot; the last letter</p>
       <div class="feature-title">Zielony Jar parkrun</div>
@@ -1926,10 +1925,9 @@ function renderDay(d){
       const list=mine.filter(s=>s.seg===si).sort((a,b)=>(a.ord==null?99:a.ord)-(b.ord==null?99:b.ord));
       if(!list.length)return "";
       return list.map(s=>{
-        const tag=s.tag==="split"?'<span class="tag split">May split</span>'
-          :s.tag==="food"?'<span class="tag food">Food</span>':'<span class="tag all">Everyone</span>';
+        const tag=s.tag==="food"?'<span class="tag food">Food</span><br>':'';
         return `<button class="btn${db.done[s.id]?" done":""}${s.solemn?" solemn":""}" data-s="${s.id}">
-          ${tag}<br>${esc(s.title)}<small>${esc(s.sub)}</small></button>`;}).join("");
+          ${tag}${esc(s.title)}<small>${esc(s.sub)}</small></button>`;}).join("");
     }).join("");
   app.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>go({n:"stop",id:b.dataset.s}));
 }
