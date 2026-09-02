@@ -182,6 +182,20 @@ hr.rule:after{content:"";display:block;height:3px;
 .memory.short p{font-family:var(--display);font-size:calc(24px*var(--fs));margin-bottom:6px}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
 @media (max-width:520px){.gallery{grid-template-columns:1fr}}
+.gallery.solo{grid-template-columns:1fr;margin:0 0 18px}
+
+/* the headline block on the front page */
+.feature{background:linear-gradient(180deg,#FFFDF5,#FBF3E2);
+  border:2px solid var(--gold);border-left:9px solid var(--red);border-radius:6px;
+  padding:18px 20px 16px;margin:20px 0 30px;box-shadow:0 3px 10px rgba(26,26,32,.09)}
+.feature{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.feature:active{background:linear-gradient(180deg,#FBF3E2,#F6EAD2)}
+.feature:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.feature .eyebrow{color:var(--red)}
+.feature-title{font-family:var(--display);font-size:calc(29px*var(--fs));line-height:1.12;margin:0 0 6px}
+.feature-sub{margin:0 0 14px;color:var(--ink-soft);font-size:calc(16px*var(--fs))}
+.feature-link{margin:0;font-size:calc(15px*var(--fs))}
+.feature-link a{color:var(--blue);font-weight:600}
 .gallery figure{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:5px;padding:8px}
 .gallery img{display:block;width:100%;height:auto;border-radius:3px;background:#EDE8E2}
 .gallery figcaption{font-size:calc(13px*var(--fs));color:var(--ink-soft);line-height:1.4;
@@ -1059,19 +1073,19 @@ const STOPS=[
  look:[],
  memoriesTitle:"From the family",
  memories:[
-  {t:"My first memory is when Paul's interest was piqued to enquire about the parkrun. He decided to come along to check it out after a few weeks of me doing it when I got back from London, around the end of 2015. His recap post-run was \"never have I seen such a bunch of misfits but sure isn't it great for them\".", who:"Che"},
-  {t:"A good memory is surprising him by showing up to do his 300th run with him in Griffeen park. We told the race director to give him a congratulations in her briefing at the start and loads of the regulars came up after to say that Millie should have been congratulated too. Also, all the ones that have turned into lovely family days out like Bundoran (for Paul's 70th trip to Donegal) or Hillsborough (where Paul got more than he bargained for having to help push the double buggy up those hills!).", who:"Vinny"},
-  {t:"Saturday mornings! The best mornings of the week! Paul heads out at 08:30 and isn't back till 10:30. My morning to myself: sleep in, shower, a walk, and breakfast. All in my own space. It's special. Personal space is so important to everyone, big or small, old or young.", who:"Jenny"},
-  {t:"I've been sporadic at best with my parkrun attendances, but those I did, I have always enjoyed. The one which stands out is Christmas morning in Palmerstown, both for the fun of dressing up as Santa and the dread of that final hill.", who:"Sean"},
-  {t:"I've enjoyed the runs I have done with Paul and can always expect the question if I will be running in the morning when we visit for the weekend. I look forward to getting back into it more soon.", who:"Rose"},
-  {t:"Woof.", who:"Millie"}],
- photos:[
-  {src:"images/Bundoran-Promenade.jpg", cap:"Paul's 70th"},
-  {src:"images/Hillsborough-Forest.jpg", cap:"When Sean had just moved to Belfast"},
-  {src:"images/Avondale.jpg", cap:"Avondale parkrun was another lovely run and day out"},
-  {src:"images/Christmas-Day-Parkrun.jpg", cap:"Christmas Day parkrun 2019"},
-  {src:"images/100th-Parkrun.jpg", cap:"Paul, Millie, and Barry on Paul's 100th Run"},
-  {src:"images/Sean-First-Parkrun.jpg", cap:"When Sean did the parkrun for the first time. Always bringing the shtyle (2016)"}],
+  {t:"My first memory is when Paul's interest was piqued to enquire about the parkrun. He decided to come along to check it out after a few weeks of me doing it when I got back from London, around the end of 2015. His recap post-run was \"never have I seen such a bunch of misfits but sure isn't it great for them\".", who:"Che",
+   photo:{src:"images/Hillsborough-Forest.jpg", cap:"When Sean had just moved to Belfast"}},
+  {t:"A good memory is surprising him by showing up to do his 300th run with him in Griffeen park. We told the race director to give him a congratulations in her briefing at the start and loads of the regulars came up after to say that Millie should have been congratulated too. Also, all the ones that have turned into lovely family days out like Bundoran (for Paul's 70th trip to Donegal) or Hillsborough (where Paul got more than he bargained for having to help push the double buggy up those hills!).", who:"Vinny",
+   photo:{src:"images/Avondale.jpg", cap:"Avondale parkrun was another lovely run and day out"}},
+  {t:"Saturday mornings! The best mornings of the week! Paul heads out at 08:30 and isn't back till 10:30. My morning to myself: sleep in, shower, a walk, and breakfast. All in my own space. It's special. Personal space is so important to everyone, big or small, old or young.", who:"Jenny",
+   photo:{src:"images/Christmas-Day-Parkrun.jpg", cap:"Christmas Day parkrun 2019"}},
+  {t:"I've been sporadic at best with my parkrun attendances, but those I did, I have always enjoyed. The one which stands out is Christmas morning in Palmerstown, both for the fun of dressing up as Santa and the dread of that final hill.", who:"Sean",
+   photo:{src:"images/Sean-First-Parkrun.jpg", cap:"When Sean did the parkrun for the first time. Always bringing the shtyle (2016)"}},
+  {t:"I've enjoyed the runs I have done with Paul and can always expect the question if I will be running in the morning when we visit for the weekend. I look forward to getting back into it more soon.", who:"Rose",
+   photo:{src:"images/Bundoran-Promenade.jpg", cap:"Paul's 70th"}},
+  {t:"Woof.", who:"Millie",
+   photo:{src:"images/100th-Parkrun.jpg", cap:"Paul, Millie, and Barry on Paul's 100th Run"}}],
+ photos:[],
  guesses:[],
  act:null,
  verdict:null,
@@ -1604,7 +1618,8 @@ function renderStop(s){
     ${s.why?`<div class="why"><p class="eyebrow">Why it matters</p><p>${esc(s.why)}</p></div>`:""}
     ${s.look&&s.look.length?`<div class="look"><p class="eyebrow">Look for</p>${s.look.map(p=>`<p>${esc(p)}</p>`).join("")}</div>`:""}
     ${s.memories&&s.memories.length?`<h3>${esc(s.memoriesTitle||"From the family")}</h3>
-      ${s.memories.map(m=>`<div class="memory${m.t.length<40?" short":""}"><p>${esc(m.t)}</p><p class="who">${esc(m.who)}</p></div>`).join("")}`:""}
+      ${s.memories.map(m=>`<div class="memory${m.t.length<40?" short":""}"><p>${esc(m.t)}</p><p class="who">${esc(m.who)}</p></div>`
+        +(m.photo?`<div class="gallery solo"><figure><img src="${esc(m.photo.src)}" alt="${esc(m.photo.cap)}" loading="lazy"><figcaption>${esc(m.photo.cap)}</figcaption></figure></div>`:"")).join("")}`:""}
     ${s.photos&&s.photos.length?`<h3>The photographs</h3>
       <div class="gallery">${s.photos.map(ph=>`<figure><img src="${esc(ph.src)}" alt="${esc(ph.cap)}" loading="lazy"><figcaption>${esc(ph.cap)}</figcaption></figure>`).join("")}</div>`:""}
     ${s.kids?`<h3>For the children</h3>
@@ -1875,7 +1890,13 @@ function exportMail(){
 function renderHome(){
   barTitle.textContent="As Old As It Looks";
   app.innerHTML=`<h1>As Old As It Looks</h1>
-    <p class="lede">Three days arguing with Kraków about what is genuinely ancient, what is younger than it pretends, and what somebody simply made up. Here's to Paul reaching the end of the alphabet.</p>
+    <p class="lede">The tour of Krakow as it is described on this web page shows a genuinely fascinating city, though one that sometimes pretends to be younger than it is and others it pretends to be older. More often that, there are parts that are just simply exaggerated or made up for the sake of a good story. With all that in mind, I can't think of a better place to mark a milestone in Paul's life and a family holiday.</p>
+    <div class="feature" data-s="zielonyjar" role="button" tabindex="0">
+      <p class="eyebrow">Saturday, 9am &middot; the last letter</p>
+      <div class="feature-title">Zielony Jar parkrun</div>
+      <p class="feature-sub">25 letters conquered, Z nearly in the bag, and only J left standing. The stop, the family memories and the photographs.</p>
+      <p class="feature-link"><a href="https://www.parkrun.pl/zielonyjar/" target="_blank" rel="noopener">Zielony Jar parkrun on parkrun.pl &rarr;</a></p>
+    </div>
     <h3>Do this one first</h3>
     ${QUIZ.map(q=>`<button class="btn quiz" data-q="${q.id}">${esc(q.round)}<small>${esc(q.blurb.split(".")[0])}.</small></button>`).join("")}
     <h3>Then, in this order</h3>
@@ -1888,6 +1909,10 @@ function renderHome(){
     <hr class="rule">
     <div class="row"><button class="solid" id="pl">Players and scores</button></div>`;
   app.querySelector("[data-food]").onclick=()=>go({n:"food"});
+  app.querySelectorAll("[data-s]").forEach(b=>{
+    b.onclick=e=>{if(e.target.closest("a"))return;go({n:"stop",id:b.dataset.s});};
+    b.onkeydown=e=>{if((e.key==="Enter"||e.key===" ")&&!e.target.closest("a")){e.preventDefault();go({n:"stop",id:b.dataset.s});}};
+  });
   app.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>go({n:"quiz",id:b.dataset.q}));
   app.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>go({n:"day",id:b.dataset.d}));
   app.querySelector("#pl").onclick=()=>go({n:"players"});
@@ -1900,7 +1925,7 @@ function renderDay(d){
     d.segs.map((seg,si)=>{
       const list=mine.filter(s=>s.seg===si).sort((a,b)=>(a.ord==null?99:a.ord)-(b.ord==null?99:b.ord));
       if(!list.length)return "";
-      return `<h3>${esc(seg)}</h3>`+list.map(s=>{
+      return list.map(s=>{
         const tag=s.tag==="split"?'<span class="tag split">May split</span>'
           :s.tag==="food"?'<span class="tag food">Food</span>':'<span class="tag all">Everyone</span>';
         return `<button class="btn${db.done[s.id]?" done":""}${s.solemn?" solemn":""}" data-s="${s.id}">
